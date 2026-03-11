@@ -1,0 +1,24 @@
+[package]
+name = "wzq"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+crossterm = { version = "0.27", features = ["events", "event-stream"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+rand = "0.8"
+chrono = "0.4"
+inquire = "0.7"
+dirs = "5.0"
+futures-util = "0.3"
+
+[[bin]]
+name = "server"
+path = "src/bin/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/bin/client.rs"
