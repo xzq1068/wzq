@@ -24,7 +24,7 @@ type Rooms = Arc<Mutex<HashMap<String, Room>>>;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let mut port = 8080;
+    let mut port = 10031;
     let listener = loop {
         let addr = format!("127.0.0.1:{}", port);
         match TcpListener::bind(&addr).await {

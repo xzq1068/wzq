@@ -56,7 +56,7 @@ async fn main() -> anyhow::Result<()> {
     'outer: loop {
         // Step 1: Addr
         while config.addr.is_none() {
-            match Text::new("Server Addr:").with_default("127.0.0.1:8080").prompt() {
+            match Text::new("Server Addr:").with_default("117.72.47.118:10011").prompt() {
                 Ok(v) => {
                     match TcpStream::connect(&v).await {
                         Ok(s) => { config.addr = Some(v); stream = Some(s); }
