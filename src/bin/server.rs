@@ -26,7 +26,7 @@ type Rooms = Arc<Mutex<HashMap<String, Room>>>;
 async fn main() -> anyhow::Result<()> {
     let mut port = 10031;
     let listener = loop {
-        let addr = format!("127.0.0.1:{}", port);
+        let addr = format!("0.0.0.0:{}", port);
         match TcpListener::bind(&addr).await {
             Ok(l) => {
                 let now = chrono::Local::now().format("%Y-%m-%d %H:%M:%S");
